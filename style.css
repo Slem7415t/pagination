@@ -1,0 +1,34 @@
+@font-face {
+	font-family: 'Montserrat', sans-serif;
+	src: url(/styles/fonts/static/Montserrat-Black.ttf);
+	src: url(/styles/fonts/static/Montserrat-BlackItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-Bold.ttf);
+	src: url(/styles/fonts/static/Montserrat-BoldItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-ExtraBold.ttf);
+	src: url(/styles/fonts/static/Montserrat-ExtraBoldItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-ExtraLight.ttf);
+	src: url(/styles/fonts/static/Montserrat-ExtraLightItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-Italic.ttf);
+	src: url(/styles/fonts/static/Montserrat-Light.ttf);
+	src: url(/styles/fonts/static/Montserrat-LightItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-Medium.ttf);
+	src: url(/styles/fonts/static/Montserrat-MediumItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-Regular.ttf);
+	src: url(/styles/fonts/static/Montserrat-SemiBold.ttf);
+	src: url(/styles/fonts/static/Montserrat-Thin.ttf);
+	src: url(/styles/fonts/static/Montserrat-ThinItalic.ttf);
+	src: url(/styles/fonts/static/Montserrat-SemiBoldItalic.ttf);
+	src: url(/styles/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+	src: url(/styles/fonts/Montserrat-VariableFont_wght.ttf); 
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box; color: rgba(0, 0, 0, 1); font-family: 'Montserrat', sans-serif;}
+
+.container { margin: 0 auto; max-width: 1240px; min-width: 320px; padding: 10px;}
+.title {display: flex; justify-content: center;}
+.posts {display: flex; flex-direction: column; align-items: center;}
+.post {padding: 10px; /*border: 1px solid rgba(0, 0, 0, 1);*/}
+.pagination {display: flex; justify-content: center;}
+.pagination__list {display: flex; align-items: center; list-style-type: none;}
+.pagination__item {padding: 10px; margin: 10px; cursor: pointer;}
+.pagination__item_active {font-weight: 600; color: gold;}
