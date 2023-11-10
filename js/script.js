@@ -71,3 +71,84 @@ async function main() {
 } // блок с пагинацией
 
 main(); // вызываем блок с пагинацией
+
+const cards = [
+    {
+        "id": 1,
+        "images" : "images/cards/image-1.jpg",
+        "title" : "picture-1-title",
+        "description" : "picture-1-description"
+    },
+    {
+        "id": 2,
+        "images" : "images/cards/image-2.jpg",
+        "title" : "picture-2-title",
+        "description" : "picture-2-description"
+    },
+    {
+        "id": 3,
+        "images" : "images/cards/image-3.jpg",
+        "title" : "picture-3-title",
+        "description" : "picture-3-description"
+    }
+];
+
+const previewBtn = document.querySelector('.preview__button');
+const preview = document.querySelector('.preview');
+
+previewBtn.onclick = () => {
+    preview.style.display = 'none';
+    document.querySelector('html').classList.remove('no-scroll');
+}
+
+function createCard(selector, array) {
+    for (let i = 0; i <= array.length; i++) {
+        let item = document.createElement('div');
+        item.classList.add('card');
+        
+        item.innerHTML = `
+        <div class="card-img">
+            <img src="${array[i]['images']}" alt="image-${array[i]['id']}" />
+        </div>  
+        <div class="card-content">
+            <h3 class="card__title">${array[i]["title"]}</h3>
+            <p class="card__description">${array[i]["description"]}</p>
+            <button class="card__button btn" type="button" data-modal-btn="image-${array[i]['id']}">Подробнее</button>
+        </div>
+        `;
+
+        document.querySelector(selector).append(item);
+
+        const preview = document.querySelector('.preview');
+
+        let btns = document.querySelectorAll("*[data-modal-btn]");
+
+        btns[i].addEventListener('click', function(){
+
+            let name = btns[i].getAttribute('data-modal-btn');
+            let modal = document.querySelector("[data-modal-img='" + name + "']");
+
+            let imgs = document.querySelectorAll(".preview__img img");    
+            
+            for (let itemImgs of imgs) {
+                itemImgs.style.display = "none";
+            }
+
+            preview.style.display = "flex";
+            modal.style.display = "flex";
+            document.querySelector('html').classList.add('no-scroll');
+        });
+
+        let itemImg = document.createElement('div');
+        itemImg.classList.add('preview__img');
+
+        itemImg.innerHTML = `
+            <img src="${array[i]['images']}" alt="image-${array[i]['id']}" data-modal-img="image-${array[i]['id']}" />
+        `;
+
+        document.querySelector('.preview').append(itemImg);
+
+    }
+
+}
+createCard('.cards', cards);
