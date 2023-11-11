@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <div class="container"><h1>Пагинация</h1></div>
+    </header>
     <main>
       <div class="container">
-        <h1 class="title">Pagination</h1>
         <div class="cards"></div>
         <div class="pagination"></div>
       </div>
@@ -19,7 +21,21 @@
         <button class="preview__button btn" type="button">&times;</button>
       </div>
     </main>
-
-    <script src="js/script.js"></script>
+    <footer>
+      <div class="container">
+        <div class="signature">
+          <picture>
+            <a href="https://remarkable-biscuit-ef6531.netlify.app"
+              ><img
+                src="images/signature.png"
+                class="signature__img"
+                alt="signature"
+            /></a>
+          </picture>
+          <span>&copy;2023</span><span>г.</span>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
