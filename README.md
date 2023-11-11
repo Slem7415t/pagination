@@ -1,7 +1,8 @@
 # pagination
 
-![Скриншот](https://github.com/Slem7415t/)
+![Скриншот](https://github.com/Slem7415t/pagination/blob/work/images/scrin.png)
 
-Ссылка на работу: https://
+Ссылка на работу: https://pagination-alex-sem.netlify.app
 
-источник https://www.youtube.com/watch?v=cMw9x0BP_xk&t=784s
+Учился по видео: https://www.youtube.com/watch?v=cMw9x0BP_xk&t=784s
+и каналу: https://www.youtube.com/@ITDoctor
